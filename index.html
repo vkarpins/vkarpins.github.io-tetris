@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="icon" href="./assets/icons/fire2.png" type="image/x-icon">
+    <title>Tetris</title>
+</head>
+
+<body>
+
+    <script type="module" src="static/game.js"></script>
+
+    <div class="maincontainer">
+
+        <div class="score-timer-container">
+            <div id="main"></div>
+            <div class="input-container">
+                <input type="text" class="score" readonly>
+                <input type="text" class="timer" readonly>
+            </div>
+
+        </div>
+
+        <img class="firecontainer">
+        <img class="firecontainer1">
+
+        <div class="wrapper">
+
+            <div class="controlscontainer">
+                <div id="addmain"></div>
+                <div id="player-container">
+                    <button id="play-pause" class="pause" title="pause and continue"></button>
+                    <button id="restart" title="restart"></button>
+                    <button id="back-to-home" title="back to menu"></button>
+                </div>
+            </div>
+
+            <img class="firecontainer2">
+        </div>
+
+
+    </div>
+
+    <div class="dragoncontainer"></div>
+
+
+    <audio id="track">
+        <source src="./assets/sounds/story.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="track1">
+        <source src="./assets/sounds/level1.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="track2">
+        <source src="./assets/sounds/level2.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="track3">
+        <source src="./assets/sounds/level3.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="track4">
+        <source src="./assets/sounds/dragon.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="start-overlay">
+        <div class="start-container">
+            <div class="side-panel">
+
+                <div class="start-game-buttons">
+                    <div class="start-campaign-button">START CAMPAIGN</div>
+                    <div class="start-button">ENDLESS MODE</div>
+                </div>
+                <ul class="instructions">
+                    <p class="control-options">CONTROL OPTIONS</p>
+                    <li>← → — press moving left and right;</li>
+                    <li>↑ — press and rotate;</li>
+                    <li>↓ — hold and speed up;</li>
+                    <li>Esc — press and stop the game.</li>
+                </ul>
+
+            </div>
+
+            <div class="back-img">
+                <img src="./assets/icons/princess1.png" alt="princess" class="princess">
+                <img src="./assets/icons/dragon1.1.png" alt="dragon1" class="dragon1">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="plot-overlay"></div>
+
+    <div class="restart-overlay">
+        <div class="restart-container">
+            Are you sure you want to restart a game?
+            Your score will be lost.
+
+            <div class="restart-overlay-answers">
+                <div class="yes-btn">Yes</div>
+                <div class="no-btn">No</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="next-level-overlay">
+        <div class="next-level-container">
+            <div class="response">
+                Congratulations! You killed a dragon.
+                Your hands are now covered in blood.
+                Are you satisfied? Slayer...
+            </div>
+            <div class="next-level-answers">
+                <div class="stop-btn">Throw princess to death</div>
+                <div class="next-level-btn">Keep killing innocents</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="coward-overlay">
+        <div class="coward-container">
+            There is no way back, coward.
+        </div>
+        <div class="coward-btn">Continue playing</div>
+    </div>
+
+    <div class="score-overlay">
+        <div class="score-container">
+        </div>
+        <input type="text" class="score-namefield" placeholder="Enter your name..." name="name" required>
+        <div class="seeresult-btn">See other results</div>
+
+    </div>
+
+    <div class="gameover-overlay">
+        <div class="gameover-container">
+        </div>
+        <div class="gameover-scoretable"></div>
+        <div class="gameover-answers">
+            <div class="backtomenu-btn">Back to menu</div>
+            <div class="tryagain-btn">Try again</div>
+        </div>
+    </div>
+
+    <div class="ending-overlay">
+        <div class="ending-container">
+
+            <div class="princess-container">
+                <img class="princess-img">
+                <div class="princess-responses">
+                    <p class="princess-response1"></p>
+                    <p class="princess-response2"></p>
+                </div>
+            </div>
+
+            <div class="ending-answers">
+                <div class="butt-1"></div>
+                <div class="butt-2"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="goodbye-overlay">
+        <div class="goodbye-container">
+            <div class="goodbye-text"></div>
+            <div class="goodbye-answers">
+                <div class="backtomenu">Back to menu</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-container"></div>
+
+</body>
+
+</html>
